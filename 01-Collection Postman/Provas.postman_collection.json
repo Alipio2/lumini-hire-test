@@ -1,0 +1,513 @@
+{
+	"info": {
+		"_postman_id": "6a6f31dd-1b85-4318-bffc-2501d0250ae5",
+		"name": "Provas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Produto",
+			"item": [
+				{
+					"name": "Perfil admin",
+					"item": [
+						{
+							"name": "01- Cadastra produto",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkN2VjMTRkNDVkZjQ0MWE3NGJjZmFlNiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwibmFtZSI6ImFkbWluIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNTY4NTg4MzE2LCJleHAiOjE1Njg4NDc1MTZ9.Q2-dzuIZ5LmA4X3_FwLztZwUSgpw7w2U-Oif70RcTAw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"title\":\"teclado ps2\",\n\t\"description\":\"teclado abnt2\",\n\t\"slug\":\"teclado-abnt2-ps2-quantum-24588\",\n\t\"price\":\"150\",\n\t\"active\": true,\n\t\"tags\": [\"teclado\", \"ps2\"]\n\t\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/produts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"produts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "02-Altualizar produto",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkN2VjMTRkNDVkZjQ0MWE3NGJjZmFlNiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwibmFtZSI6ImFkbWluIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNTY4NTg4MzE2LCJleHAiOjE1Njg4NDc1MTZ9.Q2-dzuIZ5LmA4X3_FwLztZwUSgpw7w2U-Oif70RcTAw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"title\":\"teclado ps2sadadasda\",\n\t\"description\":\"teclado abnt2asdasdasda\",\n\t\"price\": 15\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/produts/5d7ec5193254351f54e5b8bb",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"produts",
+										"5d7ec5193254351f54e5b8bb"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "03-Apagar produto",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkN2VjMTRkNDVkZjQ0MWE3NGJjZmFlNiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwibmFtZSI6ImFkbWluIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNTY4NTg4MzE2LCJleHAiOjE1Njg4NDc1MTZ9.Q2-dzuIZ5LmA4X3_FwLztZwUSgpw7w2U-Oif70RcTAw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/produts/5d7ecb0d6b3d670fb835838c",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"produts",
+										"5d7ecb0d6b3d670fb835838c"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Perfil usuario",
+					"item": [
+						{
+							"name": "01- Cadastra produto token restrito",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkN2VjMTJkNDVkZjQ0MWE3NGJjZmFlNSIsImVtYWlsIjoidGVzdGUwM0BnbWFpbC5jb20iLCJuYW1lIjoidGVzdGUwMyIsInJvbGVzIjpbInVzZXIiXSwiaWF0IjoxNTY4NTg5MTczLCJleHAiOjE1Njg4NDgzNzN9.U-MgWDj2UQ7C1hQjQwkyKj8uhKZRy9OVtdZjOnHVDbE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"title\":\"teclado ps2\",\n\t\"description\":\"teclado abnt2\",\n\t\"slug\":\"teclado-abnt2-ps2-quantum-24888\",\n\t\"price\":\"150\",\n\t\"active\": true,\n\t\"tags\": [\"teclado\", \"ps2\"]\n\t\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/produts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"produts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "02-Altualizar produto token restrito",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkN2VjMTJkNDVkZjQ0MWE3NGJjZmFlNSIsImVtYWlsIjoidGVzdGUwM0BnbWFpbC5jb20iLCJuYW1lIjoidGVzdGUwMyIsInJvbGVzIjpbInVzZXIiXSwiaWF0IjoxNTY4NTg5MTczLCJleHAiOjE1Njg4NDgzNzN9.U-MgWDj2UQ7C1hQjQwkyKj8uhKZRy9OVtdZjOnHVDbE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"title\":\"teclado ps2sadadasda\",\n\t\"description\":\"teclado abnt2asdasdasda\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/produts/5d7ec5193254351f54e5b8bb",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"produts",
+										"5d7ec5193254351f54e5b8bb"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "03- Listar produtos",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkN2VjMTJkNDVkZjQ0MWE3NGJjZmFlNSIsImVtYWlsIjoidGVzdGUwM0BnbWFpbC5jb20iLCJuYW1lIjoidGVzdGUwMyIsInJvbGVzIjpbInVzZXIiXSwiaWF0IjoxNTY4NTg5MTczLCJleHAiOjE1Njg4NDgzNzN9.U-MgWDj2UQ7C1hQjQwkyKj8uhKZRy9OVtdZjOnHVDbE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:3000/produts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"produts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "04- Listar produto",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkN2VjMTJkNDVkZjQ0MWE3NGJjZmFlNSIsImVtYWlsIjoidGVzdGUwM0BnbWFpbC5jb20iLCJuYW1lIjoidGVzdGUwMyIsInJvbGVzIjpbInVzZXIiXSwiaWF0IjoxNTY4NTg5MTczLCJleHAiOjE1Njg4NDgzNzN9.U-MgWDj2UQ7C1hQjQwkyKj8uhKZRy9OVtdZjOnHVDbE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:3000/produts/admin/5d7ec7b63254351f54e5b8c0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"produts",
+										"admin",
+										"5d7ec7b63254351f54e5b8c0"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "01-Criar Usuario",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"teste\",\n\t\"email\":\"teste@gmail.com\",\n\t\"password\":\"123456789\",\n\t\"roles\": [\"user\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02-Obter token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"teste03@gmail.com\",\n\t\"password\":\"123456789\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/customers/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customers",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03-Atualizar token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkN2VjMTRkNDVkZjQ0MWE3NGJjZmFlNiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwibmFtZSI6ImFkbWluIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNTY4NTg4MzE2LCJleHAiOjE1Njg4NDc1MTZ9.Q2-dzuIZ5LmA4X3_FwLztZwUSgpw7w2U-Oif70RcTAw\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/customers/refreshToken",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customers",
+								"refreshToken"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Ordem",
+			"item": [
+				{
+					"name": "01- Cadastra ordem",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkN2VjMTRkNDVkZjQ0MWE3NGJjZmFlNiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwibmFtZSI6ImFkbWluIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNTY4NTg4MzE2LCJleHAiOjE1Njg4NDc1MTZ9.Q2-dzuIZ5LmA4X3_FwLztZwUSgpw7w2U-Oif70RcTAw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\":\"monitor lg\",\n\t\"description\":\"monitor lg 1235456\",\n\t\"slug\":\"monitor lg 1247\",\n\t\"price\":\"150\",\n\t\"active\": true,\n\t\"tags\": [\"monitor\", \"ls\"]\n\t\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/produts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"produts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02- obter ordens",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkN2VjMTJkNDVkZjQ0MWE3NGJjZmFlNSIsImVtYWlsIjoidGVzdGUwM0BnbWFpbC5jb20iLCJuYW1lIjoidGVzdGUwMyIsInJvbGVzIjpbInVzZXIiXSwiaWF0IjoxNTY4NTkxNTM5LCJleHAiOjE1Njg4NTA3Mzl9.77Fu6O2Kke23ixSxDZHmNtutNqqUSLgvmDSsE9Sl2gE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
